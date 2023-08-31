@@ -1,9 +1,6 @@
 #weather-app {
-  max-width: 600p;
-}
-body {
-  font-family: sans-serif;
-  padding: 0 20px;
+  max-width: 400px;
+  border: lightseagreen;
 }
 
 h1 {
