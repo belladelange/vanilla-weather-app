@@ -1,5 +1,5 @@
-weather-app {
-  border: #231d3c;
+#weather-app {
+  max-width: 600p;
 }
 body {
   font-family: sans-serif;
