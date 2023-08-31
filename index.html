@@ -17,7 +17,7 @@
 
   <body>
     <div class="container">
-      <div id="weather-app">
+      <div class="weather-app">
         <form class="search-form" id="search-form">
           <div class="row">
             <div class="col-9">
@@ -39,7 +39,6 @@
             </div>
           </div>
         </form>
-
         <h1 id="city">Dublin</h1>
         <ul>
           <li id="date"></li>
@@ -47,14 +46,12 @@
         </ul>
         <div class="row">
           <div class="col-6">
-<div class="d-flex weather-temperature">
-  <img src="" alt="Clear" id="icon" />
-  <div>
-    <strong id="temperature"></strong
-    ><span class="units">14 °C</span>
-  </div>
-</div>
-
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature">14 °C</span>
+              </div>
+            </div>
+          </div>
           <div class="col-6">
             <ul>
               <li>
