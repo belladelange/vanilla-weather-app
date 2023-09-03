@@ -46,3 +46,9 @@ ul {
   font-size: 38px;
   color: #a75265;
 }
+
+p {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
