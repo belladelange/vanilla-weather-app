@@ -78,3 +78,13 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", goSubmit);
 
 searchCity("Dublin");
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+
+let fahrLink = document.querySelector("fahrLink");
+fahrLink.addEventListener("click", displayFahrenheitTemperature);
