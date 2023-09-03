@@ -82,9 +82,9 @@ searchCity("Dublin");
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (14 * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
+  let temperatureNew = document.querySelector("#temperature");
+  temperatureNew.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fahrLink = document.querySelector("fahrLink");
-fahrLink.addEventListener("click", displayFahrenheitTemperature);
+let fahrenheitLink = document.querySelector("fahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
