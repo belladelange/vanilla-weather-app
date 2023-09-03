@@ -29,7 +29,6 @@ function displayWeatherCondition(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
   celciusTemperature = response.data.main.temp;
