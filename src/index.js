@@ -34,21 +34,12 @@ function displayWeatherCondition(response) {
 
   celciusTemperature = response.data.main.temp;
 
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = `${Math.round(
-    response.data.main.temp
-  )} °C`;
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)} °C`;
+  humidityElement.innerHTML = `humidity: ${response.data.main.humidity}%`;
+  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 
-  document.querySelector(
-    "#humidity"
-  ).innerHTML = `humidity: ${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
-    response.data.wind.speed
-  )} km/h`;
-
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
-  let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@nx.png`
@@ -87,8 +78,8 @@ dateSubmit.innerHTML = deliverDate(currentTime);
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  let temperatureNew = document.querySelector("#temperature");
-  temperatureNew.innerHTML = Math.round(fahrenheitTemperature);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let celciusTemperature = null;
