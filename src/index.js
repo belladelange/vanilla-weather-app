@@ -24,6 +24,16 @@ function deliverDate(date) {
 }
 
 function displayWeatherCondition(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
+  celciusTemperature = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(
     response.data.main.temp
@@ -74,17 +84,19 @@ let dateSubmit = document.querySelector("#date");
 let currentTime = new Date();
 dateSubmit.innerHTML = deliverDate(currentTime);
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", goSubmit);
-
-searchCity("Dublin");
-
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   let temperatureNew = document.querySelector("#temperature");
   temperatureNew.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+let celciusTemperature = null;
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", goSubmit);
+
 let fahrenheitLink = document.querySelector("fahrenheitLink");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+searchCity("Dublin");
