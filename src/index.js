@@ -74,7 +74,7 @@ let dateSubmit = document.querySelector("#date");
 let currentTime = new Date();
 dateSubmit.innerHTML = deliverDate(currentTime);
 
-function displayFahrenheitTemperature(event) {
+function showFahr(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   let temperaturePart = document.querySelector("#temperature");
@@ -93,7 +93,7 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", goSubmit);
 
 let fahrenheitLink = document.querySelector("fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+fahrenheitLink.addEventListener("click", showFahr);
 
 let celciusLink = document.querySelector("celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
