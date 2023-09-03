@@ -82,6 +82,12 @@ function displayFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
 let celciusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
@@ -89,5 +95,8 @@ searchForm.addEventListener("submit", goSubmit);
 
 let fahrenheitLink = document.querySelector("fahrenheitLink");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusLink = document.querySelector("celciusLink");
+celciusLink.addEventListener("click", displayCelciusTemperature);
 
 searchCity("Dublin");
