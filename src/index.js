@@ -78,8 +78,8 @@ dateSubmit.innerHTML = deliverDate(currentTime);
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  let temperatureElementNew = document.querySelector("#temperature");
+  temperatureElementNew.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function displayCelciusTemperature(event) {

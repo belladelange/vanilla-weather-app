@@ -42,7 +42,7 @@ ul {
   padding: 20px;
 }
 
-.temperature {
+#temperature {
   font-size: 28px;
   color: #a75265;
 }
