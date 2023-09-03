@@ -92,10 +92,10 @@ let celciusTemperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", goSubmit);
 
-let fahrenheitLink = document.querySelector("fahrenheit-link");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahr);
 
-let celciusLink = document.querySelector("celcius-link");
+let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 searchCity("Dublin");
