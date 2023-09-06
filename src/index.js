@@ -27,13 +27,14 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tues", "Wed"];
-  forecastHTML =
-    forecastHTML +
-    `<div class="weather-forecast" id="forecast">
+  let days = ["Mon", "Tues", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="weather-forecast" id="forecast">
           <div class="row">
             <div class="col-2">
-              <div class="weather-forecast-date">Tues</div>
+              <div class="weather-forecast-date">${day}</div>
               <img src="img/partlycloudy.png" alt="" width="36" />
               <div class="weather-forecast-temps">
                 <span class="weather-forecast-temp-max">18°</span>
@@ -42,20 +43,8 @@ function displayForecast() {
             </div>
           </div>
         </div>`;
-  forecastHTML =
-    forecastHTML +
-    `<div class="weather-forecast" id="forecast">
-          <div class="row">
-            <div class="col-2">
-              <div class="weather-forecast-date">Tues</div>
-              <img src="img/partlycloudy.png" alt="" width="36" />
-              <div class="weather-forecast-temps">
-                <span class="weather-forecast-temp-max">18°</span>
-                <span class="weather-forecast-temp-min">12°</span>
-              </div>
-            </div>
-          </div>
-        </div>`;
+  });
+
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
