@@ -23,6 +23,43 @@ function deliverDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tues", "Wed"];
+  forecastHTML =
+    forecastHTML +
+    `<div class="weather-forecast" id="forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Tues</div>
+              <img src="img/partlycloudy.png" alt="" width="36" />
+              <div class="weather-forecast-temps">
+                <span class="weather-forecast-temp-max">18°</span>
+                <span class="weather-forecast-temp-min">12°</span>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="weather-forecast" id="forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Tues</div>
+              <img src="img/partlycloudy.png" alt="" width="36" />
+              <div class="weather-forecast-temps">
+                <span class="weather-forecast-temp-max">18°</span>
+                <span class="weather-forecast-temp-min">12°</span>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -99,3 +136,5 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 searchCity("Dublin");
+
+displayForecast();
