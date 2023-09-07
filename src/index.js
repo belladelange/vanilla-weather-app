@@ -86,8 +86,8 @@ function displayWeatherCondition(response) {
   celciusTemperature = response.data.main.temp;
 
   cityElement.innerHTML = response.data.name;
-  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)} °C`;
-  humidityElement.innerHTML = `humidity: ${response.data.main.humidity}%`;
+  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}`;
+  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   descriptionElement.innerHTML = response.data.weather[0].description;
 
