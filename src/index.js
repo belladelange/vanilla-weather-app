@@ -50,8 +50,8 @@ function displayForecast() {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "49b631c45785fe73d2a88477803dea22";
-  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`;
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${API key}&units=metric`;
 }
 
 function displayWeatherCondition(response) {
