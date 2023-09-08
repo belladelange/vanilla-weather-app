@@ -102,6 +102,10 @@ ul {
   padding: 20px;
 }
 
+#icon {
+  position: relative;
+  top: -10px;
+}
 #temperature {
   font-size: 44px;
   color: #005792;
